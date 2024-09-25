@@ -1,6 +1,6 @@
 import { FC, ReactNode, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { useGetMeQuery } from '@/redux/api/auth';
+import { useGetMeQuery} from '@/redux/api/auth';
 
 interface SessionProviderProps {
 	children: ReactNode;
@@ -31,6 +31,8 @@ export const SessionProvider: FC<SessionProviderProps> = ({ children }) => {
 				break;
 		}
 	};
+
+	
 
 	useEffect(() => {
 		handleNavigation();
